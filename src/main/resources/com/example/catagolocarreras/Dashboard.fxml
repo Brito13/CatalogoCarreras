@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane prefHeight="600.0" prefWidth="1024.0" styleClass="parent" stylesheets="@../../../css/Dashboard.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catagolocarreras.Controllers.DashBoardController">
+<BorderPane fx:id="mainPane" prefHeight="600.0" prefWidth="1024.0" styleClass="parent" stylesheets="@../../../css/Dashboard.css" onMousePressed="#handleMousePressed" onMouseDragged="#handleMouseDragged" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.catagolocarreras.Controllers.DashBoardController">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="45.0" styleClass="sidebard" BorderPane.alignment="CENTER">
          <children>
@@ -60,42 +60,38 @@
          <children>
             <VBox layoutX="59.0" layoutY="14.0" prefHeight="250.0" prefWidth="850.0" styleClass="pane" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <HBox>
+                  <AnchorPane fx:id="titleBar" prefHeight="40.0" prefWidth="850.0" onMousePressed="#handleMousePressed" onMouseDragged="#handleMouseDragged">
                      <children>
-                        <Label text="Dashboard" textFill="#2b2b86">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
-                           </HBox.margin>
+                        <Label text="Dashboard" textFill="#2b2b86" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Separator orientation="VERTICAL">
-                           <padding>
-                              <Insets left="10.0" right="10.0" />
-                           </padding>
-                        </Separator>
-                        <Label layoutX="20.0" layoutY="25.0" text="Disfruta la Experiencia!" textFill="#656464">
+                        <Label text="Disfruta la Experiencia!" textFill="#656464" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="12.0">
                            <font>
                               <Font name="Calibri Bold" size="15.0" />
                            </font>
-                           <HBox.margin>
-                              <Insets right="10.0" top="15.0" />
-                           </HBox.margin>
                         </Label>
-                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="133.0" layoutY="25.0" maxWidth="1.7976931348623157E308" text="5:01 11 Abril 2026" textFill="#656464" HBox.hgrow="ALWAYS">
+                        <Label text="5:01 11 Abril 2026" textFill="#656464" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="12.0">
                            <font>
                               <Font name="Calibri Bold" size="14.0" />
                            </font>
-                           <HBox.margin>
-                              <Insets right="3.0" top="15.0" />
-                           </HBox.margin>
                         </Label>
+                        <Button fx:id="minimizeButton" layoutX="770.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleMinimize" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #ffc107; -fx-background-radius: 5;" text="−" textFill="WHITE" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="8.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="closeButton" layoutX="800.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleClose" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #dc3545; -fx-background-radius: 5;" text="×" textFill="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="8.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
                      </children>
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
-                  </HBox>
+                  </AnchorPane>
                   <HBox prefHeight="191.0" prefWidth="886.0" VBox.vgrow="ALWAYS">
                      <VBox.margin>
                         <Insets bottom="30.0" />
@@ -213,6 +209,7 @@
             </Label>
             <ComboBox layoutX="151.0" layoutY="277.0" prefHeight="27.0" prefWidth="189.0" />
             <Button layoutX="374.0" layoutY="274.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="105.0" text="Buscar" />
+            <AnchorPane fx:id="resizeCorner" layoutX="920.0" layoutY="580.0" onMousePressed="#handleResizePressed" onMouseDragged="#handleResizeDragged" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #4e73df; -fx-background-radius: 0 0 20 0; -fx-cursor: nw-resize;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
          </children>
       </AnchorPane>
    </center>
