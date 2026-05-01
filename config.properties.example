@@ -1,0 +1,5 @@
+# Database Configuration
+# Copia este archivo a config.properties y coloca tu contraseña
+db.url=jdbc:mysql://localhost:3306/carrerasdisponiblesuasd
+db.username=root
+db.password=TU_CONTRASEÑA_AQUI

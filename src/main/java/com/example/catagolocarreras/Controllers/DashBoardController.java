@@ -107,10 +107,13 @@ public class DashBoardController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        System.out.println("Inicializando DashBoardController...");
         DatabaseConnection.testConnection();
         setupTableView();
+        // Cargar datos de la base de datos
         cargarFacultades();
         cargarCarreras();
+        System.out.println("DashBoardController inicializado con datos de BD");
     }
 
     private void setupTableView() {
@@ -172,18 +175,21 @@ public class DashBoardController implements Initializable {
 
         if (searchTerm.isEmpty()) {
             cargarCarreras();
-            welcomeText.setText("Mostrando todas las carreras ("
-                    + tableViewCarreras.getItems().size() + " carreras encontradas)");
+            // welcomeText.setText("Mostrando todas las carreras ("
+            //         + tableViewCarreras.getItems().size() + " carreras encontradas)");
+            System.out.println("Mostrando todas las carreras (" + tableViewCarreras.getItems().size() + " carreras encontradas)");
         } else {
             List<Carrera> carrerasEncontradas = CarreraDAO.buscarCarreras(searchTerm);
             tableViewCarreras.getItems().clear();
             tableViewCarreras.getItems().addAll(carrerasEncontradas);
 
             if (carrerasEncontradas.isEmpty()) {
-                welcomeText.setText("No se encontraron carreras con: '" + searchTerm + "'");
+                // welcomeText.setText("No se encontraron carreras con: '" + searchTerm + "'");
+                System.out.println("No se encontraron carreras con: '" + searchTerm + "'");
             } else {
-                welcomeText.setText("Se encontraron " + carrerasEncontradas.size()
-                        + " carreras con: '" + searchTerm + "'");
+                // welcomeText.setText("Se encontraron " + carrerasEncontradas.size()
+                //         + " carreras con: '" + searchTerm + "'");
+                System.out.println("Se encontraron " + carrerasEncontradas.size() + " carreras con: '" + searchTerm + "'");
             }
         }
 
