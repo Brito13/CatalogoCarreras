@@ -1,3 +1,33 @@
+/**
+ * ====================================================================
+ * Catálogo de Carreras UASD - Sistema de Gestión de Información Académica
+ * ====================================================================
+ * 
+ * Archivo: DatabaseConnection.java
+ * Propósito: Gestión de conexión a base de datos MySQL
+ * Autor: Equipo de Desarrollo UASD
+ * Fecha: 2026-05-01
+ * Versión: 1.0
+ * 
+ * Descripción:
+ * Esta clase proporciona una conexión centralizada a la base de datos MySQL
+ * para el catálogo de carreras universitarias. Utiliza configuración externa
+ * para mayor seguridad y flexibilidad en entornos de desarrollo colaborativo.
+ * 
+ * Dependencias:
+ * - MySQL Connector/J 8.0.33
+ * - Java Properties para configuración externa
+ * 
+ * Uso:
+ * Connection conn = DatabaseConnection.getConnection();
+ * 
+ * Configuración:
+ * Las credenciales se configuran en src/main/resources/config.properties
+ * 
+ * @author Equipo de Desarrollo UASD
+ * @version 1.0
+ * @since 2026-05-01
+ */
 package com.example.catagolocarreras;
 
 import java.io.IOException;

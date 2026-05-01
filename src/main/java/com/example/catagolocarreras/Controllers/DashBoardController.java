@@ -1,3 +1,37 @@
+/**
+ * ====================================================================
+ * Catálogo de Carreras UASD - Sistema de Gestión de Información Académica
+ * ====================================================================
+ * 
+ * Archivo: DashBoardController.java
+ * Propósito: Controlador principal de la interfaz gráfica del dashboard
+ * Autor: Equipo de Desarrollo UASD
+ * Fecha: 2026-05-01
+ * Versión: 1.0
+ * 
+ * Descripción:
+ * Controlador JavaFX que gestiona la interfaz principal del catálogo de carreras.
+ * Maneja la carga de datos desde la base de datos, la interacción con componentes
+ * de la interfaz (ComboBox, TableView, TextField) y la funcionalidad de búsqueda.
+ * 
+ * Características principales:
+ * - Carga dinámica de facultades y escuelas
+ * - Filtrado de carreras por facultad/escuela
+ * - Búsqueda de carreras por nombre
+ * - Gestión de eventos de la interfaz
+ * - Animaciones y efectos visuales
+ * 
+ * Componentes gestionados:
+ * - ComboBox de Facultades (comboFacultades)
+ * - ComboBox de Escuelas (comboEscuelas)
+ * - TableView de Carreras (tableViewCarreras)
+ * - Campo de búsqueda (txtBuscar)
+ * - Botón de búsqueda (btnBuscar)
+ * 
+ * @author Equipo de Desarrollo UASD
+ * @version 1.0
+ * @since 2026-05-01
+ */
 package com.example.catagolocarreras.Controllers;
 
 import com.example.catagolocarreras.DAO.CarreraDAO;

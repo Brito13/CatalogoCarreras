@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+====================================================================
+Catálogo de Carreras UASD - Sistema de Gestión de Información Académica
+====================================================================
+
+Archivo: pom.xml
+Propósito: Configuración Maven del proyecto
+Autor: Equipo de Desarrollo UASD
+Fecha: 2026-05-01
+Versión: 1.0
+
+Descripción:
+Archivo de configuración Maven que gestiona las dependencias, compilación
+y ejecución del proyecto JavaFX del catálogo de carreras UASD.
+
+Dependencias principales:
+- JavaFX Controls, FXML: Interfaz gráfica
+- MySQL Connector/J: Conexión a base de datos
+- ControlsFX, FormsFX: Componentes adicionales
+- JUnit 5: Pruebas unitarias
+
+Ejecución:
+mvn clean compile javafx:run
+
+Requisitos:
+- JDK 23 o superior
+- Maven 3.6+
+- MySQL Server 8.0+
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">

@@ -1,3 +1,35 @@
+/**
+ * ====================================================================
+ * Catálogo de Carreras UASD - Sistema de Gestión de Información Académica
+ * ====================================================================
+ * 
+ * Archivo: CarreraDAO.java
+ * Propósito: Data Access Object para operaciones con carreras, facultades y escuelas
+ * Autor: Equipo de Desarrollo UASD
+ * Fecha: 2026-05-01
+ * Versión: 1.0
+ * 
+ * Descripción:
+ * Clase DAO que implementa el patrón de acceso a datos para gestionar las operaciones
+ * CRUD y consultas especializadas sobre las tablas carreras, facultades y escuelas
+ * de la base de datos MySQL.
+ * 
+ * Funcionalidades principales:
+ * - Obtener todas las carreras disponibles
+ * - Obtener todas las facultades
+ * - Obtener escuelas por facultad
+ * - Obtener carreras por escuela
+ * - Búsqueda de carreras por nombre (búsqueda parcial)
+ * 
+ * Tablas de la base de datos:
+ * - carreras: Información de carreras universitarias
+ * - facultades: Divisiones académicas principales
+ * - escuelas: Subdivisiones dentro de facultades
+ * 
+ * @author Equipo de Desarrollo UASD
+ * @version 1.0
+ * @since 2026-05-01
+ */
 package com.example.catagolocarreras.DAO;
 
 import com.example.catagolocarreras.Models.Carrera;

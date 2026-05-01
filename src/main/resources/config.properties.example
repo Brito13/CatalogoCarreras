@@ -1,0 +1,38 @@
+# ====================================================================
+# Catálogo de Carreras UASD - Sistema de Gestión de Información Académica
+# ====================================================================
+#
+# Archivo: config.properties.example
+# Propósito: Plantilla de configuración de base de datos
+# Autor: Equipo de Desarrollo UASD
+# Fecha: 2026-05-01
+# Versión: 1.0
+#
+# Descripción:
+# Archivo plantilla para la configuración de conexión a la base de datos MySQL.
+# Cada desarrollador debe copiar este archivo a config.properties y configurar
+# sus propias credenciales de acceso.
+#
+# Uso:
+# 1. Copiar este archivo: cp config.properties.example config.properties
+# 2. Editar config.properties con tus credenciales
+# 3. No comitear config.properties (está en .gitignore)
+#
+# Configuración:
+# - db.url: URL de conexión a la base de datos MySQL
+# - db.username: Nombre de usuario de MySQL
+# - db.password: Contraseña de MySQL (reemplazar con la real)
+#
+# Base de datos requerida:
+# - Nombre: carrerasdisponiblesuasd
+# - Motor: MySQL 8.0+
+# - Charset: utf8mb4
+#
+# @author Equipo de Desarrollo UASD
+# @version 1.0
+# @since 2026-05-01
+
+# Database Configuration
+db.url=jdbc:mysql://localhost:3306/carrerasdisponiblesuasd
+db.username=root
+db.password=TU_CONTRASEÑA_AQUI

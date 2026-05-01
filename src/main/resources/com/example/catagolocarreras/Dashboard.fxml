@@ -1,4 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+====================================================================
+Catálogo de Carreras UASD - Sistema de Gestión de Información Académica
+====================================================================
+
+Archivo: Dashboard.fxml
+Propósito: Interfaz gráfica principal del catálogo de carreras
+Autor: Equipo de Desarrollo UASD
+Fecha: 2026-05-01
+Versión: 1.0
+
+Descripción:
+Archivo FXML que define la interfaz gráfica principal del sistema.
+Contiene los componentes visuales para la navegación, filtrado y búsqueda
+de carreras universitarias de la UASD.
+
+Componentes principales:
+- TableView: Muestra lista de carreras
+- ComboBox Facultades: Filtrar por facultad
+- ComboBox Escuelas: Filtrar por escuela
+- TextField: Búsqueda por nombre
+- Panel de navegación y controles de ventana
+
+Estilos:
+- Dashboard.css: Hoja de estilos principal
+- BootstrapFX: Componentes estilizados
+
+Controlador:
+DashBoardController.java gestiona la lógica de esta interfaz
+
+@author Equipo de Desarrollo UASD
+@version 1.0
+@since 2026-05-01
+-->
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
